@@ -26,12 +26,10 @@ For each running pod:
 ## Installation
 
 ```bash
-pip install k8s-resource-advisor
-```
+# From GitHub (recommended)
+pip install git+https://github.com/ShivSingh96/k8s-resource-advisor.git
 
-Or from source:
-
-```bash
+# From source
 git clone https://github.com/ShivSingh96/k8s-resource-advisor
 cd k8s-resource-advisor
 pip install -e .
