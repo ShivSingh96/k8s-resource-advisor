@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "k8s-resource-advisor"
+version = "0.1.0"
+description = "Find over-provisioned pods in your Kubernetes cluster"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "kubernetes>=28.1.0",
+    "rich>=13.7.0",
+]
+
+[project.scripts]
+k8s-resource-advisor = "k8s_resource_advisor.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
